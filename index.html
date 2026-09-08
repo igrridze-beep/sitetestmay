@@ -466,6 +466,51 @@
     .stagger-3 { transition-delay: 0.25s; }
     .stagger-4 { transition-delay: 0.35s; }
 
+    /* ===== ADMIN PANEL ===== */
+    .admin-overlay {
+      position: fixed; inset: 0; z-index: 99990;
+      background: rgba(5,5,10,0.95);
+      backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);
+      display: none; align-items: center; justify-content: center;
+      padding: 24px;
+    }
+    .admin-overlay.active { display: flex; }
+    .admin-box {
+      width: 100%; max-width: 420px;
+      background: linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0.02));
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 20px; padding: 40px 32px;
+      position: relative; overflow: hidden;
+    }
+    .admin-box::before {
+      content: ''; position: absolute; inset: 0; border-radius: inherit;
+      background: linear-gradient(180deg, rgba(255,255,255,0.12), transparent 50%);
+      pointer-events: none;
+    }
+    .admin-close {
+      position: absolute; top: 16px; right: 16px;
+      width: 32px; height: 32px; border-radius: 50%;
+      background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.1);
+      color: #fff; font-size: 1.2rem; cursor: pointer;
+      display: flex; align-items: center; justify-content: center;
+      transition: background 0.3s; z-index: 1;
+    }
+    .admin-close:hover { background: rgba(255,255,255,0.12); }
+    .admin-code {
+      margin-top: 16px; background: rgba(0,255,136,0.08);
+      border: 1px solid rgba(0,255,136,0.2); border-radius: 12px;
+      padding: 14px; font-size: 0.78rem; color: #00ff88;
+      white-space: pre-wrap; word-break: break-all;
+      font-family: 'Courier New', monospace; display: none;
+    }
+    .admin-code.show { display: block; }
+    .admin-status {
+      margin-top: 12px; padding: 10px 14px; border-radius: 10px;
+      font-size: 0.82rem; text-align: center; display: none;
+    }
+    .admin-status.ok { display: block; background: rgba(0,255,136,0.1); color: #00ff88; border: 1px solid rgba(0,255,136,0.2); }
+    .admin-status.warn { display: block; background: rgba(255,170,0,0.1); color: #ffaa00; border: 1px solid rgba(255,170,0,0.2); }
+
     /* ===== STEP LINE BETWEEN CARDS ===== */
     @media (min-width: 1024px) {
       .steps-grid { position: relative; }
@@ -845,16 +890,62 @@ O pagamento pelo seu serviço é feito imediatamente, através de MB WAY ou em c
     </footer>
   </main>
 
-  <!-- ===== JAVASCRIPT ===== -->
+  <!-- ===== ADMIN PANEL (встроена в index.html) ===== -->
+  <div class="admin-overlay" id="adminOverlay">
+    <div class="admin-box">
+      <button class="admin-close" onclick="closeAdmin()" aria-label="Закрыть">&times;</button>
+      <div class="logo" style="margin-bottom:4px;">NEONPAY</div>
+      <div class="subtitle" id="adminSubtitle">Вход в панель управления</div>
+
+      <!-- Login -->
+      <div id="adminLogin">
+        <div class="field">
+          <label style="display:block;font-size:0.75rem;font-weight:600;color:rgba(255,255,255,0.4);text-transform:uppercase;letter-spacing:0.1em;margin-bottom:8px;font-family:'Space Grotesk',sans-serif;">Пароль</label>
+          <input type="password" id="adminPassword" placeholder="Введите пароль"
+                 style="width:100%;padding:14px 16px;border-radius:12px;border:1px solid rgba(255,255,255,0.1);background:rgba(255,255,255,0.04);color:#fff;font-size:1rem;font-family:'Inter',sans-serif;outline:none;">
+        </div>
+        <button class="btn-primary" onclick="adminTryLogin()" style="width:100%;justify-content:center;">Войти</button>
+        <div id="adminLoginError" style="color:#ff5555;font-size:0.85rem;text-align:center;margin-top:12px;display:none;">Неверный пароль</div>
+      </div>
+
+      <!-- Dashboard -->
+      <div id="adminDashboard" style="display:none;">
+        <div class="field">
+          <label style="display:block;font-size:0.75rem;font-weight:600;color:rgba(255,255,255,0.4);text-transform:uppercase;letter-spacing:0.1em;margin-bottom:8px;font-family:'Space Grotesk',sans-serif;">WhatsApp номер</label>
+          <input type="tel" id="adminWhatsapp" placeholder="351911505273"
+                 style="width:100%;padding:14px 16px;border-radius:12px;border:1px solid rgba(255,255,255,0.1);background:rgba(255,255,255,0.04);color:#fff;font-size:1rem;font-family:'Inter',sans-serif;outline:none;">
+          <div style="font-size:0.75rem;color:rgba(255,255,255,0.25);margin-top:6px;">Без пробелов и +. Пример: 351911505273</div>
+        </div>
+        <div class="field">
+          <label style="display:block;font-size:0.75rem;font-weight:600;color:rgba(255,255,255,0.4);text-transform:uppercase;letter-spacing:0.1em;margin-bottom:8px;font-family:'Space Grotesk',sans-serif;">Telegram @username</label>
+          <input type="text" id="adminTelegram" placeholder="neonpay_pt"
+                 style="width:100%;padding:14px 16px;border-radius:12px;border:1px solid rgba(255,255,255,0.1);background:rgba(255,255,255,0.04);color:#fff;font-size:1rem;font-family:'Inter',sans-serif;outline:none;">
+          <div style="font-size:0.75rem;color:rgba(255,255,255,0.25);margin-top:6px;">Без @. Пример: neonpay_pt</div>
+        </div>
+        <button class="btn-primary" onclick="adminSaveContacts()" style="width:100%;justify-content:center;">Применить</button>
+        <div class="admin-status" id="adminStatusOk">Контакты сохранены! Обновятся у всех через ~1 минуту</div>
+        <pre class="admin-code" id="adminCode"></pre>
+      </div>
+    </div>
+  </div>
   <script>
   (function() {
     'use strict';
 
     /* ===== CONTACTS — ИЗМЕНЯЙ ЭТИ ЗНАЧЕНИЯ ===== */
-    var CONTACTS = {
+    var DEFAULT_CONTACTS = {
       whatsapp: '351911505273',
       telegram: 'neonpay_pt'
     };
+    var CONTACTS = Object.assign({}, DEFAULT_CONTACTS);
+
+    fetch('contacts.json?' + Date.now())
+      .then(function(r) { return r.json(); })
+      .then(function(data) {
+        CONTACTS = data;
+        updateContactLinks();
+      })
+      .catch(function() {});
 
     /* ===== PRELOADER ===== */
     const preloader = document.getElementById('preloader');
@@ -1142,6 +1233,96 @@ O pagamento pelo seu serviço é feito imediatamente, através de MB WAY ou em c
       });
     }
     updateContactLinks();
+
+    /* ===== ADMIN PANEL ===== */
+    var ADMIN_PASSWORD = 'neon2026';
+
+    function openAdmin() {
+      document.getElementById('adminOverlay').classList.add('active');
+      document.getElementById('adminWhatsapp').value = CONTACTS.whatsapp || '';
+      document.getElementById('adminTelegram').value = CONTACTS.telegram || '';
+      document.getElementById('adminLogin').style.display = '';
+      document.getElementById('adminDashboard').style.display = 'none';
+      document.getElementById('adminSubtitle').textContent = 'Вход в панель управления';
+    }
+
+    function closeAdmin() {
+      document.getElementById('adminOverlay').classList.remove('active');
+    }
+
+    window.adminTryLogin = function() {
+      var pw = document.getElementById('adminPassword').value;
+      if (pw === ADMIN_PASSWORD) {
+        document.getElementById('adminLogin').style.display = 'none';
+        document.getElementById('adminDashboard').style.display = '';
+        document.getElementById('adminSubtitle').textContent = 'Управление контактами';
+      } else {
+        var err = document.getElementById('adminLoginError');
+        err.style.display = 'block';
+        setTimeout(function() { err.style.display = 'none'; }, 3000);
+      }
+    };
+
+    document.getElementById('adminPassword').addEventListener('keydown', function(e) {
+      if (e.key === 'Enter') window.adminTryLogin();
+    });
+
+    var ADMIN_TOKEN = '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';
+    var ADMIN_REPO = 'igrridze-beep/neonpay';
+    var ADMIN_FILE = 'contacts.json';
+
+    window.adminSaveContacts = function() {
+      var whatsapp = document.getElementById('adminWhatsapp').value.replace(/[^0-9]/g, '');
+      var telegram = document.getElementById('adminTelegram').value.replace(/[^a-zA-Z0-9_]/g, '');
+      var newContacts = JSON.stringify({whatsapp: whatsapp, telegram: telegram}, null, 2);
+      var btn = document.querySelector('#adminDashboard .btn-primary');
+      btn.textContent = 'Сохранение...';
+      btn.disabled = true;
+
+      fetch('https://api.github.com/repos/' + ADMIN_REPO + '/contents/' + ADMIN_FILE, {
+        headers: { 'Authorization': 'Bearer ' + ADMIN_TOKEN }
+      })
+      .then(function(r) { return r.json(); })
+      .then(function(file) {
+        return fetch('https://api.github.com/repos/' + ADMIN_REPO + '/contents/' + ADMIN_FILE, {
+          method: 'PUT',
+          headers: {
+            'Authorization': 'Bearer ' + ADMIN_TOKEN,
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify({
+            message: 'Update contacts via admin panel',
+            content: btoa(unescape(encodeURIComponent(newContacts))),
+            sha: file.sha
+          })
+        });
+      })
+      .then(function(r) { return r.json(); })
+      .then(function() {
+        CONTACTS.whatsapp = whatsapp;
+        CONTACTS.telegram = telegram;
+        updateContactLinks();
+        document.getElementById('adminStatusOk').classList.add('ok');
+        document.getElementById('adminCode').textContent =
+          "var CONTACTS = {\n  whatsapp: '" + whatsapp + "',\n  telegram: '" + telegram + "'\n};";
+        document.getElementById('adminCode').classList.add('show');
+        btn.textContent = 'Применить';
+        btn.disabled = false;
+        setTimeout(function() {
+          document.getElementById('adminStatusOk').classList.remove('ok');
+        }, 3000);
+      })
+      .catch(function(err) {
+        btn.textContent = 'Применить';
+        btn.disabled = false;
+        alert('Ошибка: ' + err.message);
+      });
+    };
+
+    /* Open admin if URL has #admin */
+    if (window.location.hash === '#admin') {
+      requestAnimationFrame(function() { openAdmin(); });
+    }
 
   })();
   </script>
