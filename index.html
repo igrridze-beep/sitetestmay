@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="cs">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>NEONPAY — Зарабатывай на регистрации приложений</title>
+  <title>NEONPAY – Vydělávejte registrací aplikací</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
@@ -16,7 +16,7 @@
   if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
   n.queue=[];t=b.createElement(e);t.async=!0;
   t.src=v;s=b.getElementsByTagName(e)[0];
-  s.parentNode.insertBefore(s,t)}(window, document,'script',
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
   'https://connect.facebook.net/en_US/fbevents.js');
   fbq('init', '2110333649881604');
   fbq('track', 'PageView');
@@ -532,7 +532,7 @@
   <div class="cursor-ring" id="cursorRing" aria-hidden="true"></div>
 
   <!-- ===== PRELOADER ===== -->
-  <div class="preloader" id="preloader" role="alert" aria-label="A carregar">
+  <div class="preloader" id="preloader" role="alert" aria-label="Načítání">
     <div class="preloader-logo">NEONPAY</div>
     <div class="preloader-bar-track"><div class="preloader-bar" id="preloaderBar"></div></div>
   </div>
@@ -541,7 +541,7 @@
   <header class="header" id="header" role="banner">
     <div class="max-w-7xl mx-auto flex items-center justify-between">
       <!-- Logo -->
-      <a href="#" class="flex items-center gap-3 text-white no-underline" data-cursor aria-label="NEONPAY — para a página inicial">
+      <a href="#" class="flex items-center gap-3 text-white no-underline" data-cursor aria-label="NEONPAY – na hlavní stránku">
         <svg width="36" height="36" viewBox="0 0 36 36" fill="none" aria-hidden="true">
           <rect x="2" y="2" width="32" height="32" rx="8" stroke="url(#logoGrad)" stroke-width="2"/>
           <path d="M10 10h6l4 8-4 8h-6l4-8-4-8z" fill="url(#logoGrad)"/>
@@ -577,17 +577,16 @@
             <div class="hero-enter d1 badge-pulse inline-flex items-center gap-2 px-5 py-2.5 rounded-full mb-8"
                  style="background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.1); backdrop-filter: blur(12px);">
               <span aria-hidden="true">🔥</span>
-              <span class="text-sm font-medium text-white/70">Mais de 10.000 pessoas já ganharam dinheiro connosco. Clica no botão «<span class="text-neon font-semibold cursor-pointer underline decoration-neon/40 decoration-1 underline-offset-2 hover:decoration-neon transition" onclick="showScreen('payouts')" role="link" tabindex="0">Pagamentos</span>» e vê todas as provas.</span>
+              <span class="text-sm font-medium text-white/70">Více než 10 000 lidí s námi již vydělalo peníze. Klikněte na tlačítko «<span class="text-neon font-semibold cursor-pointer underline decoration-neon/40 decoration-1 underline-offset-2 hover:decoration-neon transition" onclick="showScreen('payouts')" role="link" tabindex="0">Platby</span>» a podívejte se na všechny důkazy.</span>
             </div>
             <!-- Title -->
             <h1 class="hero-enter d2 font-display font-bold leading-[1.05] mb-6"
                 style="font-size: clamp(2.4rem, 5.5vw, 4.5rem);">
-              <span class="gradient-text">GANHE DINHEIRO AO REGISTAR APLICAÇÕES</span>
+              <span class="gradient-text">VYDĚLEJTE PENÍZE REGISTRACÍ APLIKACÍ</span>
             </h1>
             <!-- Subtitle -->
             <p class="hero-enter d3 text-lg text-white/50 mb-10 max-w-xl" style="line-height: 1.7;">
-              A partir de 100 € por cada ação. <strong class="text-[#00f0ff]">SEM INVESTIMENTO</strong> — não precisa de investir nenhum dinheiro. Está aqui para ganhar dinheiro, não para gastar.
-O pagamento pelo seu serviço é feito imediatamente, através de MB WAY ou em criptomoeda.
+              Od 100 € za každou akci. <strong class="text-[#00f0ff]">BEZ INVESTICE</strong> – nemusíte investovat žádné peníze. Jste zde, abyste vydělávali, ne abyste utráceli. Platba za vaše služby je provedena okamžitě, prostřednictvím MB WAY nebo v kryptoměně.
             </p>
             <!-- Buttons -->
             <div class="hero-enter d4 flex flex-wrap gap-4">
@@ -596,7 +595,7 @@ O pagamento pelo seu serviço é feito imediatamente, através de MB WAY ou em c
                  onmouseover="this.style.borderColor='rgba(0,180,255,0.6)'; this.style.boxShadow='0 0 30px rgba(0,180,255,0.15)'"
                  onmouseout="this.style.borderColor='rgba(0,180,255,0.3)'; this.style.boxShadow='none'"
                  onclick="fbq('track', 'Lead');"
-                 aria-label="Enviar mensagem no Telegram">
+                 aria-label="Odeslat zprávu na Telegram">
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
                   <path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/>
                 </svg>
@@ -607,7 +606,7 @@ O pagamento pelo seu serviço é feito imediatamente, através de MB WAY ou em c
                  onmouseover="this.style.borderColor='rgba(37,211,102,0.6)'; this.style.boxShadow='0 0 30px rgba(37,211,102,0.15)'"
                  onmouseout="this.style.borderColor='rgba(37,211,102,0.3)'; this.style.boxShadow='none'"
                  onclick="fbq('track', 'Lead');"
-                 aria-label="Enviar mensagem no WhatsApp">
+                 aria-label="Odeslat zprávu na WhatsApp">
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="#25D366" aria-hidden="true">
                   <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/>
                 </svg>
@@ -627,12 +626,12 @@ O pagamento pelo seu serviço é feito imediatamente, através de MB WAY ou em c
                   </svg>
                 </div>
                 <div>
-                  <div class="text-xs text-white/40">Bank App</div>
-                  <div class="text-sm font-semibold text-white">Registo</div>
+                  <div class="text-xs text-white/40">Bankovní aplikace</div>
+                  <div class="text-sm font-semibold text-white">Registrace</div>
                 </div>
               </div>
               <div class="text-2xl font-bold font-display text-neon">+150€</div>
-              <div class="text-xs text-white/40 mt-1">Pagamento recebido</div>
+              <div class="text-xs text-white/40 mt-1">Platba přijata</div>
             </div>
             <!-- Toast notification -->
             <div class="float-card float-2 p-4">
@@ -640,7 +639,7 @@ O pagamento pelo seu serviço é feito imediatamente, através de MB WAY ou em c
                 <img src="https://i.pravatar.cc/40?img=32" alt="" class="w-9 h-9 rounded-full" loading="lazy">
                 <div>
                   <div class="text-sm font-semibold text-white">Rafael</div>
-                  <div class="text-xs text-neon">+230€ · agora mesmo</div>
+                  <div class="text-xs text-neon">+230€ · právě teď</div>
                 </div>
               </div>
             </div>
@@ -656,7 +655,7 @@ O pagamento pelo seu serviço é feito imediatamente, através de MB WAY ou em c
       <div class="hero-enter d5 ticker-wrap relative z-10">
         <div class="flex items-center gap-3 absolute left-6 z-10 bg-dark/80 backdrop-blur-sm pr-4 py-3">
           <span class="ticker-dot" aria-hidden="true"></span>
-          <span class="text-xs font-semibold text-white/60 uppercase tracking-wider font-display">Live</span>
+          <span class="text-xs font-semibold text-white/60 uppercase tracking-wider font-display">Živě</span>
         </div>
         <div class="ticker-track" id="tickerTrack">
           <!-- Filled by JS -->
@@ -668,9 +667,9 @@ O pagamento pelo seu serviço é feito imediatamente, através de MB WAY ou em c
     <section class="relative py-28 lg:py-36" id="why">
       <div class="max-w-7xl mx-auto px-6">
         <div class="text-center mb-16 reveal">
-          <div class="overline">// Por Qur Nós</div>
-          <h2 class="font-display font-bold text-3xl md:text-5xl text-white mb-4">POR QUE ESCOLHEM A NOSSA EMPRESA</h2>
-          <p class="text-white/40 max-w-lg mx-auto">Segurança, rapidez e transparência.</p>
+          <div class="overline">// Proč my</div>
+          <h2 class="font-display font-bold text-3xl md:text-5xl text-white mb-4">PROČ SI VYBRAT NAŠI SPOLEČNOST</h2>
+          <p class="text-white/40 max-w-lg mx-auto">Bezpečnost, rychlost a transparentnost.</p>
         </div>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
           <!-- Card 1 -->
@@ -681,8 +680,8 @@ O pagamento pelo seu serviço é feito imediatamente, através de MB WAY ou em c
                 <path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/>
               </svg>
             </div>
-            <h3 class="font-display font-bold text-lg text-white mb-2">LEGAL E SEGURO</h3>
-            <p class="text-white/40 text-sm leading-relaxed">Estamos no mercado há mais de 5 anos e trabalhamos exclusivamente com aplicações legais, devidamente licenciadas e com boa reputação. Garantimos segurança e total conformidade legal.</p>
+            <h3 class="font-display font-bold text-lg text-white mb-2">LEGÁLNÍ A BEZPEČNÉ</h3>
+            <p class="text-white/40 text-sm leading-relaxed">Jsme na trhu více než 5 let a spolupracujeme výhradně s legálními aplikacemi, řádně licencovanými a s dobrou pověstí. Zajišťujeme bezpečnost a plný soulad se zákonem.</p>
           </div>
           <!-- Card 2 -->
           <div class="tilt-card glass p-8 reveal stagger-2" data-cursor>
@@ -694,8 +693,8 @@ O pagamento pelo seu serviço é feito imediatamente, através de MB WAY ou em c
                 <line x1="2" y1="2" x2="22" y2="22" stroke="#ff5555" stroke-width="2"/>
               </svg>
             </div>
-            <h3 class="font-display font-bold text-lg text-white mb-2">0 € DE INVESTIMENTO</h3>
-            <p class="text-white/40 text-sm leading-relaxed">Não é necessário fazer qualquer tipo de investimento ou depósito. Você está aqui para ganhar dinheiro, não para investir. Conosco, você recebe dinheiro — não precisa pagar nada.</p>
+            <h3 class="font-display font-bold text-lg text-white mb-2">0 € INVESTICE</h3>
+            <p class="text-white/40 text-sm leading-relaxed">Není nutné provádět žádnou investici ani vklad. Jste zde, abyste vydělávali peníze, ne abyste investovali. U nás dostáváte peníze – nemusíte nic platit.</p>
           </div>
           <!-- Card 3 -->
           <div class="tilt-card glass p-8 reveal stagger-3" data-cursor>
@@ -707,8 +706,8 @@ O pagamento pelo seu serviço é feito imediatamente, através de MB WAY ou em c
                 <path d="M12 7h4.5a2.5 2.5 0 0 0 0-5C13 2 12 7 12 7z"/>
               </svg>
             </div>
-            <h3 class="font-display font-bold text-lg text-white mb-2">BÓNUS POR INDICAÇÃO DE AMIGOS</h3>
-            <p class="text-white/40 text-sm leading-relaxed">Convide amigos, familiares e colegas e receba dinheiro por cada pessoa indicada. O pagamento mínimo por cada amigo que se juntar é de 100 €.</p>
+            <h3 class="font-display font-bold text-lg text-white mb-2">BONUS ZA DOPORUČENÍ PŘÁTEL</h3>
+            <p class="text-white/40 text-sm leading-relaxed">Pozvěte přátele, rodinu a kolegy a získejte peníze za každou doporučenou osobu. Minimální platba za každého přítele, který se přidá, je 100 €.</p>
           </div>
           <!-- Card 4 -->
           <div class="tilt-card glass p-8 reveal stagger-4" data-cursor>
@@ -718,8 +717,8 @@ O pagamento pelo seu serviço é feito imediatamente, através de MB WAY ou em c
                 <circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/>
               </svg>
             </div>
-            <h3 class="font-display font-bold text-lg text-white mb-2">PAGAMENTOS 24/7</h3>
-            <p class="text-white/40 text-sm leading-relaxed">Os pagamentos são efetuados 24 horas por dia, 7 dias por semana, incluindo fins de semana e feriados. Você recebe o dinheiro imediatamente após concluir a tarefa com sucesso. O pagamento é feito de forma instantânea através de MB WAY, transferência bancária ou criptomoeda.</p>
+            <h3 class="font-display font-bold text-lg text-white mb-2">PLATBY 24/7</h3>
+            <p class="text-white/40 text-sm leading-relaxed">Platby jsou prováděny 24 hodin denně, 7 dní v týdnu, včetně víkendů a svátků. Peníze obdržíte okamžitě po úspěšném dokončení úkolu. Platba probíhá okamžitě prostřednictvím MB WAY, bankovního převodu nebo kryptoměny.</p>
           </div>
         </div>
       </div>
@@ -729,10 +728,10 @@ O pagamento pelo seu serviço é feito imediatamente, através de MB WAY ou em c
     <section class="relative py-28 lg:py-40" id="cta">
       <div class="max-w-7xl mx-auto px-6 text-center">
         <h2 class="font-display font-bold text-3xl md:text-6xl text-white mb-4 reveal">
-          Pronto para começar?
+          Připraveni začít?
         </h2>
         <p class="text-white/40 text-lg mb-10 reveal reveal-delay-1">
-          Envie a palavra-código <span class="inline-block px-3 py-1 rounded-lg bg-neon/10 text-neon font-bold font-display border border-neon/20">BÓNUS</span> pelo WhatsApp ou Telegram e os nossos consultores responderão imediatamente.
+          Pošlete kódové slovo <span class="inline-block px-3 py-1 rounded-lg bg-neon/10 text-neon font-bold font-display border border-neon/20">BONUS</span> přes WhatsApp nebo Telegram a naši konzultanti vám okamžitě odpoví.
         </p>
         <div class="inline-grid grid-cols-2 gap-4 justify-center reveal reveal-delay-2">
           <a href="https://t.me/neonpay_pt" data-contact="telegram" target="_blank" rel="noopener noreferrer" class="btn-glass magnetic" data-cursor
@@ -740,7 +739,7 @@ O pagamento pelo seu serviço é feito imediatamente, através de MB WAY ou em c
              onmouseover="this.style.borderColor='rgba(0,180,255,0.6)'; this.style.boxShadow='0 0 30px rgba(0,180,255,0.15)'"
              onmouseout="this.style.borderColor='rgba(0,180,255,0.3)'; this.style.boxShadow='none'"
              onclick="fbq('track', 'Lead');"
-             aria-label="Enviar mensagem no Telegram">
+             aria-label="Odeslat zprávu na Telegram">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
               <path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/>
             </svg>
@@ -751,7 +750,7 @@ O pagamento pelo seu serviço é feito imediatamente, através de MB WAY ou em c
              onmouseover="this.style.borderColor='rgba(37,211,102,0.6)'; this.style.boxShadow='0 0 30px rgba(37,211,102,0.15)'"
              onmouseout="this.style.borderColor='rgba(37,211,102,0.3)'; this.style.boxShadow='none'"
              onclick="fbq('track', 'Lead');"
-             aria-label="Enviar mensagem no WhatsApp">
+             aria-label="Odeslat zprávu na WhatsApp">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="#25D366" aria-hidden="true">
               <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/>
             </svg>
@@ -764,7 +763,7 @@ O pagamento pelo seu serviço é feito imediatamente, através de MB WAY ou em c
             <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true">
               <text x="50%" y="55%" dominant-baseline="middle" text-anchor="middle" fill="currentColor" font-size="18" font-weight="700" font-family="sans-serif">€</text>
             </svg>
-            Ver pagamentos
+            Zobrazit platby
           </button>
         </div>
       </div>
@@ -773,17 +772,17 @@ O pagamento pelo seu serviço é feito imediatamente, através de MB WAY ou em c
     <!-- ===== FOOTER ===== -->
     <footer class="relative border-t border-white/5 py-8">
       <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-white/30">
-        <div>&copy; 2026 NEONPAY. Todos os direitos reservados.</div>
+        <div>&copy; 2026 NEONPAY. Všechna práva vyhrazena.</div>
         <div class="flex gap-6">
-          <a href="#" class="hover:text-white/60 transition" data-cursor>Política de Privacidade</a>
-          <a href="#" class="hover:text-white/60 transition" data-cursor>Termos de Uso</a>
+          <a href="#" class="hover:text-white/60 transition" data-cursor>Zásady ochrany osobních údajů</a>
+          <a href="#" class="hover:text-white/60 transition" data-cursor>Podmínky použití</a>
         </div>
       </div>
     </footer>
   </main>
 
   <!-- ===== SCREEN 2: PAYOUTS ===== -->
-  <main class="screen hidden" id="screen-payouts" aria-label="Pagamentos reais">
+  <main class="screen hidden" id="screen-payouts" aria-label="Skutečné platby">
     <!-- Ambient blobs (smaller) -->
     <div class="blob blob-1 opacity-20" aria-hidden="true"></div>
     <div class="blob blob-3 opacity-15" aria-hidden="true"></div>
@@ -791,71 +790,71 @@ O pagamento pelo seu serviço é feito imediatamente, através de MB WAY ou em c
     <div class="relative py-28 lg:py-36">
       <div class="max-w-7xl mx-auto px-6">
         <!-- Back -->
-        <button class="btn-back magnetic mb-10" data-cursor onclick="showScreen('home')" aria-label="Voltar à página inicial">
+        <button class="btn-back magnetic mb-10" data-cursor onclick="showScreen('home')" aria-label="Zpět na hlavní stránku">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
             <polyline points="15 18 9 12 15 6"/>
           </svg>
-          Voltar
+          Zpět
         </button>
 
         <div class="text-center mb-16">
-          <div class="overline">// Pagamentos</div>
-          <h1 class="font-display font-bold text-3xl md:text-5xl text-white mb-4">Pagamentos reais</h1>
-          <p class="text-white/40 max-w-lg mx-auto">Mais de 10.000 pagamentos bem-sucedidos no último mês</p>
+          <div class="overline">// Platby</div>
+          <h1 class="font-display font-bold text-3xl md:text-5xl text-white mb-4">Skutečné platby</h1>
+          <p class="text-white/40 max-w-lg mx-auto">Více než 10 000 úspěšných plateb za poslední měsíc</p>
         </div>
 
         <!-- Info text -->
         <div class="max-w-2xl mx-auto mb-10 text-center reveal">
-          <p class="text-white/70 text-sm leading-relaxed">Queridos amigos, apresentamos apenas alguns exemplos de pagamentos bem-sucedidos. Por motivos de segurança, os dados dos beneficiários foram ocultados.</p>
-          <p class="text-white/70 text-sm leading-relaxed mt-3">Você também pode ganhar dinheiro da mesma forma. Entre em contato conosco agora mesmo pelo <strong class="text-[#00f0ff]">WhatsApp</strong> ou <strong class="text-[#00f0ff]">Telegram</strong>.</p>
+          <p class="text-white/70 text-sm leading-relaxed">Vážení přátelé, představujeme jen několik příkladů úspěšných plateb. Z bezpečnostních důvodů byly údaje příjemců skryty.</p>
+          <p class="text-white/70 text-sm leading-relaxed mt-3">I vy můžete vydělávat peníze stejným způsobem. Kontaktujte nás hned teď přes <strong class="text-[#00f0ff]">WhatsApp</strong> nebo <strong class="text-[#00f0ff]">Telegram</strong>.</p>
         </div>
 
         <!-- Masonry grid -->
         <div class="masonry">
-          <div class="masonry-item"><img src="photo/1.jpg" alt="Captura de ecrã do pagamento" loading="lazy"></div>
-          <div class="masonry-item"><img src="photo/2.jpg" alt="Captura de ecrã do pagamento" loading="lazy"></div>
-          <div class="masonry-item"><img src="photo/3.jpg" alt="Captura de ecrã do pagamento" loading="lazy"></div>
-          <div class="masonry-item"><img src="photo/4.jpg" alt="Captura de ecrã do pagamento" loading="lazy"></div>
-          <div class="masonry-item"><img src="photo/5.jpg" alt="Captura de ecrã do pagamento" loading="lazy"></div>
-          <div class="masonry-item"><img src="photo/6.jpg" alt="Captura de ecrã do pagamento" loading="lazy"></div>
-          <div class="masonry-item"><img src="photo/7.jpg" alt="Captura de ecrã do pagamento" loading="lazy"></div>
-          <div class="masonry-item"><img src="photo/8.jpg" alt="Captura de ecrã do pagamento" loading="lazy"></div>
-          <div class="masonry-item"><img src="photo/9.jpg" alt="Captura de ecrã do pagamento" loading="lazy"></div>
-          <div class="masonry-item"><img src="photo/10.jpg" alt="Captura de ecrã do pagamento" loading="lazy"></div>
-          <div class="masonry-item"><img src="photo/11.jpg" alt="Captura de ecrã do pagamento" loading="lazy"></div>
-          <div class="masonry-item"><img src="photo/12.jpg" alt="Captura de ecrã do pagamento" loading="lazy"></div>
-          <div class="masonry-item"><img src="photo/13.jpg" alt="Captura de ecrã do pagamento" loading="lazy"></div>
-          <div class="masonry-item"><img src="photo/14.jpg" alt="Captura de ecrã do pagamento" loading="lazy"></div>
-          <div class="masonry-item"><img src="photo/15.jpg" alt="Captura de ecrã do pagamento" loading="lazy"></div>
-          <div class="masonry-item"><img src="photo/16.jpg" alt="Captura de ecrã do pagamento" loading="lazy"></div>
-          <div class="masonry-item"><img src="photo/17.jpg" alt="Captura de ecrã do pagamento" loading="lazy"></div>
-          <div class="masonry-item"><img src="photo/18.jpg" alt="Captura de ecrã do pagamento" loading="lazy"></div>
-          <div class="masonry-item"><img src="photo/19.jpg" alt="Captura de ecrã do pagamento" loading="lazy"></div>
-          <div class="masonry-item"><img src="photo/20.jpg" alt="Captura de ecrã do pagamento" loading="lazy"></div>
-          <div class="masonry-item"><img src="photo/21.jpg" alt="Captura de ecrã do pagamento" loading="lazy"></div>
-          <div class="masonry-item"><img src="photo/22.jpg" alt="Captura de ecrã do pagamento" loading="lazy"></div>
-          <div class="masonry-item"><img src="photo/23.jpg" alt="Captura de ecrã do pagamento" loading="lazy"></div>
-          <div class="masonry-item"><img src="photo/24.jpg" alt="Captura de ecrã do pagamento" loading="lazy"></div>
-          <div class="masonry-item"><img src="photo/25.jpg" alt="Captura de ecrã do pagamento" loading="lazy"></div>
-          <div class="masonry-item"><img src="photo/26.jpg" alt="Captura de ecrã do pagamento" loading="lazy"></div>
-          <div class="masonry-item"><img src="photo/27.jpg" alt="Captura de ecrã do pagamento" loading="lazy"></div>
-          <div class="masonry-item"><img src="photo/28.jpg" alt="Captura de ecrã do pagamento" loading="lazy"></div>
-          <div class="masonry-item"><img src="photo/29.jpg" alt="Captura de ecrã do pagamento" loading="lazy"></div>
-          <div class="masonry-item"><img src="photo/30.jpg" alt="Captura de ecrã do pagamento" loading="lazy"></div>
-          <div class="masonry-item"><img src="photo/31.jpg" alt="Captura de ecrã do pagamento" loading="lazy"></div>
+          <div class="masonry-item"><img src="photo/1.jpg" alt="Snímek obrazovky platby" loading="lazy"></div>
+          <div class="masonry-item"><img src="photo/2.jpg" alt="Snímek obrazovky platby" loading="lazy"></div>
+          <div class="masonry-item"><img src="photo/3.jpg" alt="Snímek obrazovky platby" loading="lazy"></div>
+          <div class="masonry-item"><img src="photo/4.jpg" alt="Snímek obrazovky platby" loading="lazy"></div>
+          <div class="masonry-item"><img src="photo/5.jpg" alt="Snímek obrazovky platby" loading="lazy"></div>
+          <div class="masonry-item"><img src="photo/6.jpg" alt="Snímek obrazovky platby" loading="lazy"></div>
+          <div class="masonry-item"><img src="photo/7.jpg" alt="Snímek obrazovky platby" loading="lazy"></div>
+          <div class="masonry-item"><img src="photo/8.jpg" alt="Snímek obrazovky platby" loading="lazy"></div>
+          <div class="masonry-item"><img src="photo/9.jpg" alt="Snímek obrazovky platby" loading="lazy"></div>
+          <div class="masonry-item"><img src="photo/10.jpg" alt="Snímek obrazovky platby" loading="lazy"></div>
+          <div class="masonry-item"><img src="photo/11.jpg" alt="Snímek obrazovky platby" loading="lazy"></div>
+          <div class="masonry-item"><img src="photo/12.jpg" alt="Snímek obrazovky platby" loading="lazy"></div>
+          <div class="masonry-item"><img src="photo/13.jpg" alt="Snímek obrazovky platby" loading="lazy"></div>
+          <div class="masonry-item"><img src="photo/14.jpg" alt="Snímek obrazovky platby" loading="lazy"></div>
+          <div class="masonry-item"><img src="photo/15.jpg" alt="Snímek obrazovky platby" loading="lazy"></div>
+          <div class="masonry-item"><img src="photo/16.jpg" alt="Snímek obrazovky platby" loading="lazy"></div>
+          <div class="masonry-item"><img src="photo/17.jpg" alt="Snímek obrazovky platby" loading="lazy"></div>
+          <div class="masonry-item"><img src="photo/18.jpg" alt="Snímek obrazovky platby" loading="lazy"></div>
+          <div class="masonry-item"><img src="photo/19.jpg" alt="Snímek obrazovky platby" loading="lazy"></div>
+          <div class="masonry-item"><img src="photo/20.jpg" alt="Snímek obrazovky platby" loading="lazy"></div>
+          <div class="masonry-item"><img src="photo/21.jpg" alt="Snímek obrazovky platby" loading="lazy"></div>
+          <div class="masonry-item"><img src="photo/22.jpg" alt="Snímek obrazovky platby" loading="lazy"></div>
+          <div class="masonry-item"><img src="photo/23.jpg" alt="Snímek obrazovky platby" loading="lazy"></div>
+          <div class="masonry-item"><img src="photo/24.jpg" alt="Snímek obrazovky platby" loading="lazy"></div>
+          <div class="masonry-item"><img src="photo/25.jpg" alt="Snímek obrazovky platby" loading="lazy"></div>
+          <div class="masonry-item"><img src="photo/26.jpg" alt="Snímek obrazovky platby" loading="lazy"></div>
+          <div class="masonry-item"><img src="photo/27.jpg" alt="Snímek obrazovky platby" loading="lazy"></div>
+          <div class="masonry-item"><img src="photo/28.jpg" alt="Snímek obrazovky platby" loading="lazy"></div>
+          <div class="masonry-item"><img src="photo/29.jpg" alt="Snímek obrazovky platby" loading="lazy"></div>
+          <div class="masonry-item"><img src="photo/30.jpg" alt="Snímek obrazovky platby" loading="lazy"></div>
+          <div class="masonry-item"><img src="photo/31.jpg" alt="Snímek obrazovky platby" loading="lazy"></div>
         </div>
 
         <!-- CTA -->
         <div class="text-center mt-20 mb-10">
-          <h2 class="font-display font-bold text-2xl md:text-4xl text-white mb-4">Pronto para começar?</h2>
-          <p class="text-white/40 mb-8">Envie a palavra-código <span class="inline-block px-3 py-1 rounded-lg bg-neon/10 text-neon font-bold font-display border border-neon/20">BÓNUS</span> pelo WhatsApp ou Telegram e os nossos consultores responderão imediatamente.</p>
+          <h2 class="font-display font-bold text-2xl md:text-4xl text-white mb-4">Připraveni začít?</h2>
+          <p class="text-white/40 mb-8">Pošlete kódové slovo <span class="inline-block px-3 py-1 rounded-lg bg-neon/10 text-neon font-bold font-display border border-neon/20">BONUS</span> přes WhatsApp nebo Telegram a naši konzultanti vám okamžitě odpoví.</p>
           <div class="flex flex-col sm:flex-row justify-center gap-4">
             <a href="https://t.me/neonpay_pt" data-contact="telegram" target="_blank" rel="noopener noreferrer" class="btn-glass magnetic" data-cursor
                style="border-color: rgba(0,180,255,0.3);"
                onmouseover="this.style.borderColor='rgba(0,180,255,0.6)'; this.style.boxShadow='0 0 30px rgba(0,180,255,0.15)'"
                onmouseout="this.style.borderColor='rgba(0,180,255,0.3)'; this.style.boxShadow='none'"
                onclick="fbq('track', 'Lead');"
-               aria-label="Enviar mensagem no Telegram">
+               aria-label="Odeslat zprávu na Telegram">
               <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
                 <path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/>
               </svg>
@@ -866,7 +865,7 @@ O pagamento pelo seu serviço é feito imediatamente, através de MB WAY ou em c
                onmouseover="this.style.borderColor='rgba(37,211,102,0.6)'; this.style.boxShadow='0 0 30px rgba(37,211,102,0.15)'"
                onmouseout="this.style.borderColor='rgba(37,211,102,0.3)'; this.style.boxShadow='none'"
                onclick="fbq('track', 'Lead');"
-               aria-label="Enviar mensagem no WhatsApp">
+               aria-label="Odeslat zprávu na WhatsApp">
               <svg width="20" height="20" viewBox="0 0 24 24" fill="#25D366" aria-hidden="true">
                 <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/>
               </svg>
@@ -881,58 +880,59 @@ O pagamento pelo seu serviço é feito imediatamente, através de MB WAY ou em c
     <!-- Footer -->
     <footer class="relative border-t border-white/5 py-8">
       <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-white/30">
-        <div>&copy; 2026 NEONPAY. Todos os direitos reservados.</div>
+        <div>&copy; 2026 NEONPAY. Všechna práva vyhrazena.</div>
         <div class="flex gap-6">
-          <a href="#" class="hover:text-white/60 transition" data-cursor>Política de Privacidade</a>
-          <a href="#" class="hover:text-white/60 transition" data-cursor>Termos de Uso</a>
+          <a href="#" class="hover:text-white/60 transition" data-cursor>Zásady ochrany osobních údajů</a>
+          <a href="#" class="hover:text-white/60 transition" data-cursor>Podmínky použití</a>
         </div>
       </div>
     </footer>
   </main>
 
-  <!-- ===== ADMIN PANEL (встроена в index.html) ===== -->
+  <!-- ===== ADMIN PANEL (v českém překladu) ===== -->
   <div class="admin-overlay" id="adminOverlay">
     <div class="admin-box">
-      <button class="admin-close" onclick="closeAdmin()" aria-label="Закрыть">&times;</button>
+      <button class="admin-close" onclick="closeAdmin()" aria-label="Zavřít">&times;</button>
       <div class="logo" style="margin-bottom:4px;">NEONPAY</div>
-      <div class="subtitle" id="adminSubtitle">Вход в панель управления</div>
+      <div class="subtitle" id="adminSubtitle">Přihlášení do administrace</div>
 
       <!-- Login -->
       <div id="adminLogin">
         <div class="field">
-          <label style="display:block;font-size:0.75rem;font-weight:600;color:rgba(255,255,255,0.4);text-transform:uppercase;letter-spacing:0.1em;margin-bottom:8px;font-family:'Space Grotesk',sans-serif;">Пароль</label>
-          <input type="password" id="adminPassword" placeholder="Введите пароль"
+          <label style="display:block;font-size:0.75rem;font-weight:600;color:rgba(255,255,255,0.4);text-transform:uppercase;letter-spacing:0.1em;margin-bottom:8px;font-family:'Space Grotesk',sans-serif;">Heslo</label>
+          <input type="password" id="adminPassword" placeholder="Zadejte heslo"
                  style="width:100%;padding:14px 16px;border-radius:12px;border:1px solid rgba(255,255,255,0.1);background:rgba(255,255,255,0.04);color:#fff;font-size:1rem;font-family:'Inter',sans-serif;outline:none;">
         </div>
-        <button class="btn-primary" onclick="adminTryLogin()" style="width:100%;justify-content:center;">Войти</button>
-        <div id="adminLoginError" style="color:#ff5555;font-size:0.85rem;text-align:center;margin-top:12px;display:none;">Неверный пароль</div>
+        <button class="btn-primary" onclick="adminTryLogin()" style="width:100%;justify-content:center;">Přihlásit</button>
+        <div id="adminLoginError" style="color:#ff5555;font-size:0.85rem;text-align:center;margin-top:12px;display:none;">Nesprávné heslo</div>
       </div>
 
       <!-- Dashboard -->
       <div id="adminDashboard" style="display:none;">
         <div class="field">
-          <label style="display:block;font-size:0.75rem;font-weight:600;color:rgba(255,255,255,0.4);text-transform:uppercase;letter-spacing:0.1em;margin-bottom:8px;font-family:'Space Grotesk',sans-serif;">WhatsApp номер</label>
+          <label style="display:block;font-size:0.75rem;font-weight:600;color:rgba(255,255,255,0.4);text-transform:uppercase;letter-spacing:0.1em;margin-bottom:8px;font-family:'Space Grotesk',sans-serif;">WhatsApp číslo</label>
           <input type="tel" id="adminWhatsapp" placeholder="351911505273"
                  style="width:100%;padding:14px 16px;border-radius:12px;border:1px solid rgba(255,255,255,0.1);background:rgba(255,255,255,0.04);color:#fff;font-size:1rem;font-family:'Inter',sans-serif;outline:none;">
-          <div style="font-size:0.75rem;color:rgba(255,255,255,0.25);margin-top:6px;">Без пробелов и +. Пример: 351911505273</div>
+          <div style="font-size:0.75rem;color:rgba(255,255,255,0.25);margin-top:6px;">Bez mezer a +. Příklad: 351911505273</div>
         </div>
         <div class="field">
-          <label style="display:block;font-size:0.75rem;font-weight:600;color:rgba(255,255,255,0.4);text-transform:uppercase;letter-spacing:0.1em;margin-bottom:8px;font-family:'Space Grotesk',sans-serif;">Telegram @username</label>
+          <label style="display:block;font-size:0.75rem;font-weight:600;color:rgba(255,255,255,0.4);text-transform:uppercase;letter-spacing:0.1em;margin-bottom:8px;font-family:'Space Grotesk',sans-serif;">Telegram @uživatelské jméno</label>
           <input type="text" id="adminTelegram" placeholder="neonpay_pt"
                  style="width:100%;padding:14px 16px;border-radius:12px;border:1px solid rgba(255,255,255,0.1);background:rgba(255,255,255,0.04);color:#fff;font-size:1rem;font-family:'Inter',sans-serif;outline:none;">
-          <div style="font-size:0.75rem;color:rgba(255,255,255,0.25);margin-top:6px;">Без @. Пример: neonpay_pt</div>
+          <div style="font-size:0.75rem;color:rgba(255,255,255,0.25);margin-top:6px;">Bez @. Příklad: neonpay_pt</div>
         </div>
-        <button class="btn-primary" onclick="adminSaveContacts()" style="width:100%;justify-content:center;">Применить</button>
-        <div class="admin-status" id="adminStatusOk">Контакты сохранены! Обновятся у всех через ~1 минуту</div>
+        <button class="btn-primary" onclick="adminSaveContacts()" style="width:100%;justify-content:center;">Použít</button>
+        <div class="admin-status" id="adminStatusOk">Kontakty uloženy! U všech se aktualizují přibližně za 1 minutu</div>
         <pre class="admin-code" id="adminCode"></pre>
       </div>
     </div>
   </div>
+
   <script>
   (function() {
     'use strict';
 
-    /* ===== CONTACTS — ИЗМЕНЯЙ ЭТИ ЗНАЧЕНИЯ ===== */
+    /* ===== CONTACTS — změňte tyto hodnoty ===== */
     var DEFAULT_CONTACTS = {
       whatsapp: '351911505273',
       telegram: 'neonpay_pt'
@@ -1042,7 +1042,7 @@ O pagamento pelo seu serviço é feito imediatamente, através de MB WAY ou em c
     function formatNumber(val, decimals, prefix, suffix) {
       const fixed = val.toFixed(decimals);
       const parts = fixed.split('.');
-      parts[0] = Number(parts[0]).toLocaleString('en-US');
+      parts[0] = Number(parts[0]).toLocaleString('cs-CZ');
       return prefix + parts.join('.') + suffix;
     }
 
@@ -1116,28 +1116,27 @@ O pagamento pelo seu serviço é feito imediatamente, através de MB WAY ou em c
 
     /* ===== TICKER ===== */
     const tickerData = [
-      { name: 'Afonso', amount: '150€', time: '3 dias atrás' },
-      { name: 'Mariana', amount: '420€', time: 'agora mesmo' },
-      { name: 'Bruno', amount: '280€', time: '2 dias atrás' },
-      { name: 'Diogo', amount: '185€', time: '1 dia atrás' },
-      { name: 'Leonor', amount: '310€', time: '3 dias atrás' },
-      { name: 'Pedro', amount: '120€', time: '5 horas atrás' },
-      { name: 'Sara', amount: '850€', time: '2 dias atrás' },
-      { name: 'Hugo', amount: '270€', time: '1 dia atrás' },
-      { name: 'Marta', amount: '405€', time: '3 dias atrás' },
-      { name: 'Nuno', amount: '95€', time: '12 horas atrás' },
-      { name: 'Teresa', amount: '340€', time: '2 dias atrás' },
-      { name: 'Rafael', amount: '160€', time: '1 dia atrás' },
+      { name: 'Aleš', amount: '150€', time: 'před 3 dny' },
+      { name: 'Marie', amount: '420€', time: 'právě teď' },
+      { name: 'Bruno', amount: '280€', time: 'před 2 dny' },
+      { name: 'David', amount: '185€', time: 'před 1 dnem' },
+      { name: 'Lenka', amount: '310€', time: 'před 3 dny' },
+      { name: 'Petr', amount: '120€', time: 'před 5 hodinami' },
+      { name: 'Sára', amount: '850€', time: 'před 2 dny' },
+      { name: 'Hugo', amount: '270€', time: 'před 1 dnem' },
+      { name: 'Marta', amount: '405€', time: 'před 3 dny' },
+      { name: 'Norbert', amount: '95€', time: 'před 12 hodinami' },
+      { name: 'Tereza', amount: '340€', time: 'před 2 dny' },
+      { name: 'Rafael', amount: '160€', time: 'před 1 dnem' },
     ];
 
     const tickerTrack = document.getElementById('tickerTrack');
     function buildTickerItem(d) {
       return '<span class="ticker-item"><span class="ticker-dot" aria-hidden="true"></span>' +
-        d.name + ' recebeu <span class="amount">' + d.amount + '</span> · ' + d.time + '</span>';
+        d.name + ' +' + d.amount + ' · ' + d.time + '</span>';
     }
     let tickerHTML = '';
     tickerData.forEach(d => { tickerHTML += buildTickerItem(d); });
-    // Duplicate for seamless loop
     let tickerHTML2 = '';
     tickerData.forEach(d => { tickerHTML2 += buildTickerItem(d); });
     tickerTrack.innerHTML = tickerHTML + tickerHTML2;
@@ -1154,7 +1153,6 @@ O pagamento pelo seu serviço é feito imediatamente, através de MB WAY ou em c
         home.classList.remove('hidden');
       }
       window.scrollTo({ top: 0, behavior: 'smooth' });
-      // Re-observe reveals on newly shown screen
       setTimeout(() => {
         document.querySelectorAll('.reveal:not(.visible)').forEach(el => revealObserver.observe(el));
       }, 100);
@@ -1243,7 +1241,7 @@ O pagamento pelo seu serviço é feito imediatamente, através de MB WAY ou em c
       document.getElementById('adminTelegram').value = CONTACTS.telegram || '';
       document.getElementById('adminLogin').style.display = '';
       document.getElementById('adminDashboard').style.display = 'none';
-      document.getElementById('adminSubtitle').textContent = 'Вход в панель управления';
+      document.getElementById('adminSubtitle').textContent = 'Přihlášení do administrace';
     }
 
     function closeAdmin() {
@@ -1255,7 +1253,7 @@ O pagamento pelo seu serviço é feito imediatamente, através de MB WAY ou em c
       if (pw === ADMIN_PASSWORD) {
         document.getElementById('adminLogin').style.display = 'none';
         document.getElementById('adminDashboard').style.display = '';
-        document.getElementById('adminSubtitle').textContent = 'Управление контактами';
+        document.getElementById('adminSubtitle').textContent = 'Správa kontaktů';
       } else {
         var err = document.getElementById('adminLoginError');
         err.style.display = 'block';
@@ -1267,7 +1265,7 @@ O pagamento pelo seu serviço é feito imediatamente, através de MB WAY ou em c
       if (e.key === 'Enter') window.adminTryLogin();
     });
 
-    var ADMIN_TOKEN = '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';
+    var ADMIN_TOKEN = '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';
     var ADMIN_REPO = 'igrridze-beep/neonpay';
     var ADMIN_FILE = 'contacts.json';
 
@@ -1276,7 +1274,7 @@ O pagamento pelo seu serviço é feito imediatamente, através de MB WAY ou em c
       var telegram = document.getElementById('adminTelegram').value.replace(/[^a-zA-Z0-9_]/g, '');
       var newContacts = JSON.stringify({whatsapp: whatsapp, telegram: telegram}, null, 2);
       var btn = document.querySelector('#adminDashboard .btn-primary');
-      btn.textContent = 'Сохранение...';
+      btn.textContent = 'Ukládání...';
       btn.disabled = true;
 
       fetch('https://api.github.com/repos/' + ADMIN_REPO + '/contents/' + ADMIN_FILE, {
@@ -1291,7 +1289,7 @@ O pagamento pelo seu serviço é feito imediatamente, através de MB WAY ou em c
             'Content-Type': 'application/json'
           },
           body: JSON.stringify({
-            message: 'Update contacts via admin panel',
+            message: 'Aktualizace kontaktů přes admin panel',
             content: btoa(unescape(encodeURIComponent(newContacts))),
             sha: file.sha
           })
@@ -1306,16 +1304,16 @@ O pagamento pelo seu serviço é feito imediatamente, através de MB WAY ou em c
         document.getElementById('adminCode').textContent =
           "var CONTACTS = {\n  whatsapp: '" + whatsapp + "',\n  telegram: '" + telegram + "'\n};";
         document.getElementById('adminCode').classList.add('show');
-        btn.textContent = 'Применить';
+        btn.textContent = 'Použít';
         btn.disabled = false;
         setTimeout(function() {
           document.getElementById('adminStatusOk').classList.remove('ok');
         }, 3000);
       })
       .catch(function(err) {
-        btn.textContent = 'Применить';
+        btn.textContent = 'Použít';
         btn.disabled = false;
-        alert('Ошибка: ' + err.message);
+        alert('Chyba: ' + err.message);
       });
     };
 
